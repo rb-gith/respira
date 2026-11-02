@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F6F4EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1A24" media="(prefers-color-scheme: dark)">
+<meta name="description" content="Calm, guided breathing exercises.">
+<title>Respira</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+  <!-- Home: list of exercises -->
+  <section id="home">
+    <header class="top">
+      <div>
+        <h1>Respira</h1>
+        <p class="sub">Breathe slowly. Feel better.</p>
+      </div>
+      <button class="icon-btn" id="info-btn" aria-label="About these exercises">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+      </button>
+    </header>
+    <ul id="list" class="list"></ul>
+    <footer class="credit">made by gionzana · <a href="https://buymeacoffee.com/gionzana" target="_blank" rel="noopener">☕ buy me a coffee</a></footer>
+  </section>
+
+  <!-- Session: one exercise -->
+  <section id="session" hidden>
+    <header class="bar">
+      <button class="icon-btn" id="back" aria-label="Back to exercises">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <h2 id="s-name"></h2>
+      <button class="icon-btn" id="sound" aria-pressed="false" aria-label="Sound cues">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2.2 2.2 0 0 0 4 0"/><path class="slash" d="M4 4l16 16"/></svg>
+      </button>
+    </header>
+    <p id="s-how" class="how"></p>
+
+    <button id="tap" class="tap" aria-label="Start">
+      <svg viewBox="0 0 240 240" aria-hidden="true">
+        <circle class="track" cx="120" cy="120" r="112"/>
+        <circle id="prog" cx="120" cy="120" r="112" fill="none" stroke-width="3" stroke-linecap="round" transform="rotate(-90 120 120)"/>
+        <circle id="halo" cx="120" cy="120" r="96"/>
+        <path id="guide" fill="none" stroke-width="3" stroke-linejoin="round"/>
+        <path id="core"/>
+        <circle id="dot" r="8"/>
+        <text id="hint" x="120" y="125" text-anchor="middle"></text>
+      </svg>
+    </button>
+
+    <p id="phase" class="phase"></p>
+    <p id="count" class="count"></p>
+    <div id="durations" class="chips" role="group" aria-label="Duration"></div>
+    <p id="left" class="left"></p>
+    <button id="restart" class="link"></button>
+  </section>
+</main>
+
+<dialog id="info" class="sheet">
+  <h2>About Respira</h2>
+  <p>Slow breathing with a long, gentle exhale helps the body shift into its calm, resting mode. Five minutes a day is a good start.</p>
+  <ul class="about">
+    <li><b>Cyclic sighing</b>: in a 2023 Stanford study, 5 minutes a day improved mood and slowed breathing more than mindfulness meditation.</li>
+    <li><b>4-7-8</b>: the long exhale is what helps the heart rate settle.</li>
+    <li><b>Resonance</b>: about 5.5 breaths a minute, a pace linked to higher heart rate variability.</li>
+    <li><b>Box</b>: four equal steps, used to stay steady under stress.</li>
+    <li><b>Belly</b>: slow breathing into the belly, studied for lowering stress.</li>
+  </ul>
+  <p class="safety">Stop if you feel dizzy or light-headed, and breathe normally. Skip the breath holds if you are pregnant or have a heart or lung condition. Respira is not a substitute for medical advice.</p>
+  <p class="safety">Tap the circle to start or pause. The 🔔 button turns gentle sound cues on or off.</p>
+  <button class="btn" id="info-close">Close</button>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
