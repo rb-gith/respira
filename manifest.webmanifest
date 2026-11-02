@@ -2,7 +2,7 @@
   "name": "Respira",
   "short_name": "Respira",
   "description": "Calm, guided breathing exercises.",
-  "id": "./",
+  "id": "/respira/",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
