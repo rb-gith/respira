@@ -19,6 +19,7 @@ Breathing patterns always finish a whole cycle, so a session never ends mid-brea
 - Pick an exercise, choose a duration, then **tap the circle** to start.
 - Tap again to pause; **Restart** appears while paused.
 - The faint halo marks the size of a full breath; the thin outer ring fills once per phase.
+- **EN / IT** on the home screen switches between English and Italian. The first time, the app follows the phone's language, then it remembers your choice.
 - 🔔 turns sound cues on or off (off by default): a singing bowl for breathe in (higher) and out (lower), a soft tap for holds.
 - The screen stays on during a session, and the session pauses if you leave the app.
 - With "reduce motion" switched on in the phone settings, the shape stops rippling and changing color.
@@ -33,6 +34,7 @@ Open the GitHub Pages address in Chrome, then tap **⋮ → Install app**. Respi
 |------|---------|
 | `index.html` | Page structure and the info sheet |
 | `styles.css` | Colors (light "morning mist", dark "night sky") and layout |
+| `lang.js` | All the text, in English and Italian |
 | `app.js` | Exercises, animation, timing and sound cues |
 | `manifest.webmanifest` | App name, colors and icons for "Install app" |
 | `sw.js` | Offline support |

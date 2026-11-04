@@ -1,10 +1,11 @@
 // Bump VERSION whenever any app file changes, so phones download the new version.
-const VERSION = 'v2';
+const VERSION = 'v3';
 const CACHE = 'respira-' + VERSION;
 const ASSETS = [
   './',
   'index.html',
   'styles.css',
+  'lang.js',
   'app.js',
   'manifest.webmanifest',
   'icons/icon.svg',
